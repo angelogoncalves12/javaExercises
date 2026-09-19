@@ -18,8 +18,8 @@ public class Media{
 
         System.out.print("Insira sua terceira nota: ");
         double num3 = entrada.nextDouble();
-
-        System.out.printf("Sua média final é: %.2f",(num1 + num2 + num3) / 3);
+        
+        System.out.printf("Sua média final é: %.2f%n",(num1 + num2 + num3) / 3);
         
         entrada.close();
     }
