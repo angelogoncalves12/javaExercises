@@ -17,9 +17,11 @@ public class Q7_somaAlgarismo {
 
         int soma = alg1 + alg2 + alg3;
         if (soma < 0 ){
-            System.out.printf("")
+            System.out.printf("Número Inválido. ");
         }
-        System.out.printf("O valor da soma é ", args)
-        
+        else{
+        System.out.printf("O valor da soma é %d %n", soma);
+        }
+        sc.close();
     }
 }
