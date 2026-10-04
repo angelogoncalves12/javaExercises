@@ -13,11 +13,15 @@ public class Q8_pipi {
 
     System.out.print("Qual a segunda nota do aluno? ");
     double nota2 = sc.nextDouble();
-
-    if (nota1 >= 0 && nota1 <= 10){
-        System.out.println("Essa nota é válida ") : System.out.println("Easa nota não é válida");
+    
+    
+    if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <=10){
+        double media = (nota1 + nota2) / 2;
+        System.out.printf("A média final foi de %.2f %n", media);
     }
-
+    else {
+        System.out.println("Essa nota não é válida");
+    }
+    sc.close();
 }
-
 }

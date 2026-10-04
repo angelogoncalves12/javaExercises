@@ -13,19 +13,19 @@ public class Q6_produto{
         System.out.print("Qual o valor de etiqueta do produto?  ");
         double produto = sc.nextDouble();
 
-        System.out.print("Será pago à vista (s/n)?");
-        char vista = sc.nextLine().charAt(0);
+        System.out.print("Será pago à vista (s/n)? ");
+        char vista = sc.next().charAt(0);
 
         if (vista == 's'){
             produto -= produto * 0.1;
-            System.out.printf("O valor à vista é de %f %n", produto );
+            System.out.printf("O valor à vista é de %.2f %n", produto );
         }
         else {
-            System.out.println("Irá parcelar em quantas parcelas? ");
+            System.out.print("Irá parcelar em quantas parcelas? ");
             int parcela = sc.nextInt();
 
             produto = produto/parcela;
-            System.out.printf("Serão %d parcelas de %f R$ %n", parcela, produto);
+            System.out.printf("Serão %d parcelas de %.2f R$ %n", parcela, produto);
         }
         sc.close();
     }
