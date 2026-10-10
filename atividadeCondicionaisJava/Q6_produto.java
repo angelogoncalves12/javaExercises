@@ -13,8 +13,8 @@ public class Q6_produto{
         System.out.print("Qual o valor de etiqueta do produto?  ");
         double produto = sc.nextDouble();
 
-        System.out.print("Será pago à vista (s/n)? ");
-        char vista = sc.next().charAt(0);
+        System.out.print("Será pago à vista (s - sim /n - não)? ");
+        char vista = sc.next().toLowerCase().charAt(0);
 
         if (vista == 's'){
             produto -= produto * 0.1;

@@ -6,6 +6,7 @@ caso, exiba o valor da multa, cobrando R$ 5,00 por km acima de 80Km/h. */
 public class Q2_velocidade {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         System.out.print("Informe a velocidade máxima em Km/h na pista: ");
         float velocidade = sc.nextFloat();
 
