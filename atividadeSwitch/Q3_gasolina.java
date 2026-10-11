@@ -1,5 +1,4 @@
-package atividadeSwitch;
-import java.util.Scanner;
+
 /*
 3. Um posto está vendendo combustíveis com a seguinte tabela de descontos:
 
@@ -17,20 +16,55 @@ que o preço do litro da gasolina é R$ 6,40 e o preço do litro do álcool é R
  * |             | acima de 20 litros, desconto de 6% por litro    |
  * -----------------------------------------------------------------
  */
+package atividadeSwitch;
+
+import java.util.Scanner;
+
 public class Q3_gasolina {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print ("Qual o tipo de combustível utilizado? (A - ÁLCOOL / G - GASOLINA) ");
-        char combustivel = sc.nextLine().toUpperCase().charAt(0);
+        System.out.print("Qual o tipo de combustível? (A - ÁLCOOL / G - GASOLINA): ");
+        char combustivel = sc.next().toUpperCase().charAt(0);
 
         System.out.print("Número de litros vendidos: ");
         double litros = sc.nextDouble();
 
-        switch (combustivel){
-            case 'a': 
+        double preco;
+        double desconto;
+
+        switch (combustivel) {
+            case 'A':
+                preco = 4.20;
                 
+                if (litros <= 20) {
+                    desconto = 0.03;
+                } else {
+                    desconto = 0.05;
+                }
+                break;
+
+            case 'G':
+                preco = 6.40;
+
+                if (litros <= 20) {
+                    desconto = 0.04;
+                } else {
+                    desconto = 0.06;
+                }
+                break;
+
+            default:
+                System.out.println("Combustível inválido! Escolha A ou G.");
+                sc.close();
+                return;
         }
+
+        double total = preco * litros;
+        total -= total * desconto;
+
+        System.out.printf("Valor a pagar: R$ %.2f%n", total);
+
+        sc.close();
     }
-    
 }
