@@ -22,19 +22,36 @@ public class Q6_ordem {
         System.out.print("Digite o terceiro número: ");
         double num3 = sc.nextDouble();
 
-        if (opcao == 1){
-            switch (num1, num2, num3) {
-                case (num1 > num2 > num3):
-                    
-                    break;
-            
-                default:
-                    break;
-            }
-            System.out.printf("%.1f %.1f %.1f", num1, num2, num3);
-        } else if (opcao == 2){
-            System.out.printf("%.1f %.1f %.1f", num3, num2, num1);
+        double auxiliar;
+
+        if (num1 > num2){
+            auxiliar = num1; // auxiliar vira o numero 1 
+            num1 = num2; /// numero 1 vira o numero 2
+            num2 = auxiliar; // o numero 2 vira o auxiliar
         }
+        
+        if (num1 > num3) {
+            auxiliar = num1;
+            num1 = num3;
+            num3 = auxiliar;
+        }
+
+        if (num2 > num3) {
+            auxiliar = num2;
+            num2 = num3;
+            num3 = auxiliar;
+        }
+     
+        
+        if (opcao == 1) {
+            System.out.println("Ordem crescente: " + num1 + ", " + num2 + ", " + num3);
+        } else if (opcao == 2){
+            System.out.println("Ordem decrescente: " + num3 + ", " + num2 + ", " + num1);
+        } else {
+            System.out.println("Opção fora do escopo, digite 1 ou 2");
+        }
+        sc.close();
     }
-    
 }
+    
+
