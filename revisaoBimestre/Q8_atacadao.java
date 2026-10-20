@@ -76,7 +76,7 @@ seguintes parâmetros:
         double refri = 10.0;
         double precoTotal = 0;
 
-
+                           
         System.out.print("Quantas crianças têm à mesa? ");
         criancas = sc.nextInt();
         System.out.print("Quantos adultos têm à mesa? ");
