@@ -24,7 +24,7 @@ public class Q3_temperatura {
             System.out.print("Temperatura muito baixa");
         } else if (temperatura >=10 || temperatura <= 25){
             System.out.print("Temperatura agradável");
-        } else if (temperatura > 25 || temperatura <=35){
+        } else if (temperatura > 25 || temperatura < 35){
             System.out.print("Temperatura alta"); 
         } else {
             System.out.print("Temperatura extrema");
