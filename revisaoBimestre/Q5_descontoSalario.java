@@ -15,9 +15,11 @@ public class Q5_descontoSalario {
 
         if (desconto <= 318.2){
             salario = salario - desconto;
+            System.out.printf("O desconto foi de %.2f %n");
         }
         else {
             salario = salario - 318.2;
+            System.out.println("Seu desconto excedeu o valor permitido. Pelo padrão, será de 318.2");
         }
         System.out.printf("O salário é de R$ %.2f", salario);
         sc.close();
