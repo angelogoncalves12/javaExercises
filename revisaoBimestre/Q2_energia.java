@@ -20,6 +20,7 @@ public class Q2_energia {
         }
         else {
             preco = kwh * 0.60;
+            System.out.println("Foi aplicada a tarifa reduzida");
         }
 
         System.out.printf("O preço que deverá ser pago é de  %.2f %n", preco);
